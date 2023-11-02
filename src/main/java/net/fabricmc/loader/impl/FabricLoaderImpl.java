@@ -68,8 +68,8 @@ import net.fabricmc.loader.impl.util.log.Log;
 import net.fabricmc.loader.impl.util.log.LogCategory;
 
 @SuppressWarnings("deprecation")
-public final class FabricLoaderImpl extends net.fabricmc.loader.FabricLoader {
-	public static final FabricLoaderImpl INSTANCE = InitHelper.get();
+public class FabricLoaderImpl extends net.fabricmc.loader.FabricLoader {
+	public static FabricLoaderImpl INSTANCE = InitHelper.get();
 
 	public static final int ASM_VERSION = Opcodes.ASM9;
 
@@ -100,7 +100,7 @@ public final class FabricLoaderImpl extends net.fabricmc.loader.FabricLoader {
 	private Path gameDir;
 	private Path configDir;
 
-	private FabricLoaderImpl() { }
+	protected FabricLoaderImpl() { }
 
 	/**
 	 * Freeze the FabricLoader, preventing additional mods from being loaded.
